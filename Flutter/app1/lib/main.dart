@@ -27,8 +27,12 @@ class MyApp extends StatelessWidget {
             child: Container(
               alignment: Alignment.center,
               color: Colors.blue,
-              constraints: const BoxConstraints(maxHeight: 126, maxWidth: 132),
-              child: const Text("HEWP ", textAlign: TextAlign.center),
+              constraints: const BoxConstraints(maxHeight: 120, maxWidth: 120),
+              padding: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(10, 20, 3, 2),
+              child: const Text(
+                "HEWP ", /*textAlign: TextAlign.center*/
+              ),
             ),
           ),
           floatingActionButton: FloatingActionButton(
