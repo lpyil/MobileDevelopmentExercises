@@ -7,10 +7,13 @@ class ImageExamples extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: const [
-          Text("asd"),
-          Image(image: AssetImage("assets/images/car.jpg")
+          Text("AAA"),
+          Image(
+            image: AssetImage('assets/images/car.jpg'),
           ),
+          Image(image: AssetImage('assets/images/Battle_Ballad.webp')),
         ],
       ),
     );
