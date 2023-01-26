@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
     debugPrint("MyApp build worked");
     return MaterialApp(
       title: "MyApp6",
-      theme: ThemeData(primarySwatch: Colors.purple),
+      theme: ThemeData(primarySwatch: Colors.teal),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Image examples"),
         ),
         body: const ImageExamples(),
-      ), // start
-    );
+      ),
+    ); // start
   }
 }
