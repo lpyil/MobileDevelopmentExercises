@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class ListViewEx extends StatelessWidget {
   ListViewEx({super.key});
@@ -12,7 +13,54 @@ class ListViewEx extends StatelessWidget {
       appBar: AppBar(
         title: const Text("list view"),
       ),
-      body: classicListview(), // classicListview()
+      // classicListview()
+
+      body: buildListViewSeparated(),
+    );
+  }
+
+// MORE EFFICIENT FROM DOWN FUNC
+  ListView buildListViewSeparated() {
+    return ListView.separated(
+      // builder same but there is no separatorbuilder
+      itemBuilder: (BuildContext context, int index) {
+        var currentStudent = allStudents[index];
+        return Card(
+          color: index % 2 == 0 ? Colors.red.shade300 : Colors.teal.shade300,
+          child: ListTile(
+            onTap: () {
+              if (index % 2 != 0) {
+                EasyLoading.instance.backgroundColor = Colors.blue.shade800;
+              } else {
+                EasyLoading.instance.backgroundColor = Colors.purple;
+              }
+              EasyLoading.showToast(
+                "clicked",
+                toastPosition: EasyLoadingToastPosition.bottom,
+              );
+            },
+            onLongPress: () {
+              _alertMessages(context, currentStudent);
+            },
+            title: Text(currentStudent.name),
+            subtitle: Text("${currentStudent.id}"),
+            leading: const CircleAvatar(
+              child: Icon(Icons.child_care),
+            ),
+          ),
+        );
+      },
+      itemCount: allStudents.length,
+      separatorBuilder: (context, index) {
+        var newIndex = index + 1;
+        if (newIndex % 4 == 0) {
+          return const Divider(
+            thickness: 2,
+            color: Colors.black,
+          );
+        }
+        return const SizedBox();
+      },
     );
   }
 
@@ -33,6 +81,43 @@ class ListViewEx extends StatelessWidget {
           .toList(),
     );
   }
+
+  void _alertMessages(BuildContext myContext, Student std) {
+    showDialog(
+      barrierDismissible: false,
+      context: myContext,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(std.toString()),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: [
+                Text("HEEWP " * 100),
+                Text("data2 " * 100),
+                Text("data 1" * 100),
+              ],
+            ),
+          ),
+          actions: [
+            ButtonBar(
+              children: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text("Close"),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text("Agree"),
+                ),
+              ],
+            ),
+          ],
+        );
+      },
+    );
+  }
 }
 
 class Student {
@@ -41,4 +126,9 @@ class Student {
   final String surname;
 
   Student(this.id, this.name, this.surname);
+
+  @override
+  String toString() {
+    return "Name: $name, id : $id";
+  }
 }
