@@ -1,11 +1,14 @@
 // import 'package:app8/card_listtile.dart';
-import 'package:app8/list_view_use.dart';
+// import 'package:app8/list_view_use.dart';
+//import 'list_view_layout.dart';
+import 'package:app8/grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
+
 void main() {
   runApp(const MyApp());
-  configLoading(); 
+  configLoading();
 }
 
 class MyApp extends StatelessWidget {
@@ -14,8 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ListViewEx(), // CardandListtile
-      builder: EasyLoading.init(), // widget from another people 
+      home: const GridViewEx(), // CardandListtile  ListViewEx() ListViewLayoutProblems()
+      builder: EasyLoading.init(), // widget from another people
     );
   }
 }

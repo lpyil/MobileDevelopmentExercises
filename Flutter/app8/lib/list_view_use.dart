@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
-class ListViewEx extends StatelessWidget {
-  ListViewEx({super.key});
+class ListViewEx extends StatefulWidget {
+  const ListViewEx({super.key});
+
+  @override
+  State<ListViewEx> createState() => _ListViewExState();
+}
+
+class _ListViewExState extends State<ListViewEx> {
   List<Student> allStudents = List.generate(
       500,
       (index) => Student(
           index + 1, " Student : ${index + 1} ", "Surname is : ${index + 1} "));
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +72,6 @@ class ListViewEx extends StatelessWidget {
   }
 
   // NOT EFFICIENT
-
   ListView classicListview() {
     return ListView(
       children: allStudents
