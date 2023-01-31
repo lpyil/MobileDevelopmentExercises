@@ -17,28 +17,47 @@ class GridViewEx extends StatelessWidget {
         ),
         itemCount: 100,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            alignment: Alignment.center,
-            margin: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.black,
-                width: 3,
-              ),
-              borderRadius: const BorderRadius.all(
-                Radius.circular(5),
-              ),
-              color: Colors.red[100 * ((index + 1) % 8)],
-              gradient: const LinearGradient(
-                colors: [Colors.green, Colors.blue],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-            ),
-            child: Text("AAAAA : $index"),
+          // gridViewContainer(index)
+          return GestureDetector(
+            child: gridViewContainer(index),
+            onTap: () {
+              debugPrint("$index rectangle clicked");
+            },
+            onDoubleTap: () {
+              debugPrint("$index rectangle  double clicked");
+            },
+            onLongPress: () {
+              debugPrint("$index rectangle longpress click");
+            },
+            onHorizontalDragStart: (details) {
+              debugPrint("$index rectangle drag  clicked : $details");
+            },
           );
         },
       ),
+    );
+  }
+
+  Container gridViewContainer(int index) {
+    return Container(
+      alignment: Alignment.center,
+      margin: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.black,
+          width: 3,
+        ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(5),
+        ),
+        color: Colors.red[100 * ((index + 1) % 8)],
+        gradient: const LinearGradient(
+          colors: [Colors.green, Colors.blue],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+      child: Text("AAAAA : $index"),
     );
   }
 
