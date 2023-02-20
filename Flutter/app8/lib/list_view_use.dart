@@ -32,9 +32,12 @@ class _ListViewExState extends State<ListViewEx> {
       // builder same but there is no separatorbuilder
       itemBuilder: (BuildContext context, int index) {
         var currentStudent = allStudents[index];
+
         return Card(
+          
           color: index % 2 == 0 ? Colors.red.shade300 : Colors.teal.shade300,
           child: ListTile(
+            
             onTap: () {
               if (index % 2 != 0) {
                 EasyLoading.instance.backgroundColor = Colors.blue.shade800;
@@ -138,3 +141,4 @@ class Student {
     return "Name: $name, id : $id";
   }
 }
+

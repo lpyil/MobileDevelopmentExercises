@@ -42,6 +42,7 @@ class CollapsableToolBar extends StatelessWidget {
         ),
 
         SliverPadding(
+          
           padding: const EdgeInsets.all(10),
           sliver: SliverList(
             delegate: SliverChildBuilderDelegate(

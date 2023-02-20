@@ -21,7 +21,8 @@ class BurcItem extends StatelessWidget {
           padding: const EdgeInsets.all(2),
           child: ListTile(
             onTap: () {
-              Navigator.pushNamed(context, "/burcDetay", arguments: currentBurc);
+              Navigator.pushNamed(context, "/burcDetay",
+                  arguments: currentBurc);
             },
             leading: Image.asset(
               tempPath,
