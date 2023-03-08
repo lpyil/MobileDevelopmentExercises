@@ -1,5 +1,10 @@
-import 'package:app12/text_form_field_usage.dart';
+import 'package:app12/stepper.dart';
 import 'package:flutter/material.dart';
+// import 'package:app12/date_clock.dart';
+
+//import 'package:app12/other_form_elements.dart';
+// import 'package:app12/global_key.dart';
+// import 'package:app12/text_form_field_usage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      //TextFieldExamples()
-      home: const TextFormFieldUse(
-      ),
+
+      //TextFieldExamples()   TextFormFieldUse  GlobalKeyUse OtherFormElements DateAndClock
+      home: const StepperEx(),
     );
   }
 }

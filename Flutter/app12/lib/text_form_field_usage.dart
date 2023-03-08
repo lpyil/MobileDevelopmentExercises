@@ -106,9 +106,8 @@ class _TextFormFieldUseState extends State<TextFormFieldUse> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // ignore: no_leading_underscores_for_local_identifiers
-                    bool _validate = _formKey.currentState!.validate();
-                    if (_validate == true) {
+                    bool validate = _formKey.currentState!.validate();
+                    if (validate == true) {
                       _formKey.currentState!.save();
                       String result =
                           " username = $_user\n email = $_email\n pass = $_password";
@@ -123,7 +122,7 @@ class _TextFormFieldUseState extends State<TextFormFieldUse> {
                       _formKey.currentState!.reset();
                     }
                   },
-                  child: const Text("confirm"),
+                  child: const Text("check "),
                 ),
               ],
             ),
