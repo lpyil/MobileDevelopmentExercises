@@ -37,6 +37,7 @@ class _StepperExState extends State<StepperEx> {
         child: Stepper(
           controlsBuilder: (context, details) {
             return Row(
+              //TODO write on pressed of continue and back
               children: <Widget>[
                 ElevatedButton(onPressed: () {}, child: Icon(Icons.arrow_back)),
                 Spacer(),
