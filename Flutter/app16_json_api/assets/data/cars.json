@@ -1,0 +1,34 @@
+[
+    {
+        "car_name": "Mercedes",
+        "country": "Germany",
+        "model": [
+            {
+                "model_adi": "a_serisi",
+                "fiyat": "15000",
+                "benzinli": true
+            },
+            {
+                "model_adi": "c_serisi",
+                "fiyat": "20000",
+                "benzinli": false
+            }
+        ]
+    },
+    {
+        "car_name": "Honda",
+        "country": "japonya",
+        "model": [
+            {
+                "model_adi": "civic",
+                "fiyat": "12000",
+                "benzinli ": true
+            },
+            {
+                "model_adi": "jazz",
+                "fiyat": "10000",
+                "benzinli": false
+            }
+        ]
+    }
+]
