@@ -78,7 +78,6 @@ class _CalculateAvgPageState extends State<CalculateAvgPage> {
             height: 12,
           ),
           Row(
-            //FIXME   padding maybe?
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(

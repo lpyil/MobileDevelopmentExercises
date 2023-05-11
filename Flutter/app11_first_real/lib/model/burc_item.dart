@@ -1,4 +1,3 @@
-// import 'package:app11_first_real/model/burc_detay.dart';
 import 'package:flutter/material.dart';
 
 import 'burc.dart';

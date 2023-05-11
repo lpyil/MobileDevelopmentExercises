@@ -21,10 +21,6 @@ void main(List<String> args) {
 
   print("**********");
 
-  Set<int> numbers = Set.from([1, 2, 3, 1, 3, 5, 4, 3, 2, 1]);
-  for (int i in numbers) {
-    print("numbers is : $i");
-  }
 
   // add all
   List<int> numbers2 = [0, 2, 4, 6, 8, 6, 2, 4, 0];
@@ -32,4 +28,14 @@ void main(List<String> args) {
 
   evens.addAll(numbers2);
   print(evens);
+
+
+  Set<int> numbers = Set.from([1, 2, 3, 1, 3, 5, 4, 3, 2, 1]);
+  print(numbers);
+
+
+  
+  for (int i in numbers) {
+    print("numbers is : $i", );
+  }
 }

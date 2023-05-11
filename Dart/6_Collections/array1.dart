@@ -1,4 +1,3 @@
-
 void main(List<String> args) {
   List<int> numbers = List.filled(3, 0, growable: false);
 
@@ -16,8 +15,14 @@ void main(List<String> args) {
 
   print(mix);
 // same
+
+  List<String?> names2 = [];
+  List<int> numbers3 = List.filled(3, 2, growable: true);
   List<dynamic> mix2 = List<dynamic>.filled(4, "");
+
   mix2[1] = true;
 
   print(mix2);
+  print(names2);
+  print(numbers3);
 }

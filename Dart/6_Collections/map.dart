@@ -14,7 +14,7 @@ void main(List<String> args) {
   // dynamic yerine Object yazılabilir
 
   Map<String, dynamic> alp = {
-    "surname": "Yıl",
+    "surname": "AAAA",
     "yaş": 23,
     "boy": 171.1,
     "isAlive": false

@@ -22,7 +22,7 @@ class AgeException implements Exception {
 }
 
 class Student {
-  int age = 0;
+  late int age; 
 
   Student(int age) {
     if (age < 0) {
@@ -32,3 +32,16 @@ class Student {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

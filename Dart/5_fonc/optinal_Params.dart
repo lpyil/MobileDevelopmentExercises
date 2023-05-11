@@ -8,12 +8,17 @@ void main(List<String> args) {
   int sum3 = sumNumbers2(num2: 5, num1: 1);
   print("sum3 ${sum3}");
 
-// num1 must be given, 2 is num1
+  sumNumbers3(int num1, {int num2 = 0, int num3 = 0}) {
+    return num1 + num2 + num3;
+  }
+
+// num1 must be given, num1 is 2 , num3 will be 0
   int sum4 = sumNumbers3(num2: 5, 2);
   print("sum4 ${sum4}");
+}
 
-  int Vol = calcVolume(height: 5, widht: 3);
-  print("vol ${Vol}");
+sumNumbers3(int num1, {int num2 = 0, int num3 = 0}) {
+  return num1 + num2 + num3;
 }
 
 // these params are optional
@@ -23,10 +28,6 @@ sumNumbers(int num1, [int num2 = 0, int num3 = 0]) {
 }
 
 sumNumbers2({int num1 = 0, int num2 = 0, int num3 = 0}) {
-  return num1 + num2 + num3;
-}
-
-sumNumbers3(int num1, {int num2 = 0, int num3 = 0}) {
   return num1 + num2 + num3;
 }
 

@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-
 import 'burc.dart';
-
+import 'package:flutter/material.dart';
 import 'package:palette_generator/palette_generator.dart';
 
 class BurcDetay extends StatefulWidget {
@@ -11,7 +9,6 @@ class BurcDetay extends StatefulWidget {
   @override
   State<BurcDetay> createState() => _BurcDetayState();
 }
-
 class _BurcDetayState extends State<BurcDetay> {
   Color appBarColor = Colors.transparent;
   late PaletteGenerator _generator;

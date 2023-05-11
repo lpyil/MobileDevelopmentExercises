@@ -1,17 +1,14 @@
 import 'package:app11_first_real/model/burc_item.dart';
 import 'package:flutter/material.dart';
-
 import '../data/strings.dart';
 import 'burc.dart';
 
 // ignore: must_be_immutable
 class BurcListesi extends StatelessWidget {
   late List<Burc> allBurclar;
-
   BurcListesi({super.key}) {
     allBurclar = createData();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,3 +46,12 @@ class BurcListesi extends StatelessWidget {
     return temp;
   }
 }
+
+
+
+
+
+
+
+
+

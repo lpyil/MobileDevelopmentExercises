@@ -39,10 +39,10 @@ class _StepperExState extends State<StepperEx> {
             return Row(
               //TODO write on pressed of continue and back
               children: <Widget>[
-                ElevatedButton(onPressed: () {}, child: Icon(Icons.arrow_back)),
-                Spacer(),
+                ElevatedButton(onPressed: () {}, child: const Icon(Icons.arrow_back)),
+                const Spacer(),
                 ElevatedButton(
-                    onPressed: () {}, child: Icon(Icons.arrow_forward)),
+                    onPressed: () {}, child: const Icon(Icons.arrow_forward)),
               ],
             );
           },

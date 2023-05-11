@@ -6,6 +6,9 @@ void main(List<String> args) {
   print(numbers);
 
   List<String?> names = [];
+  List<int> numbers3 = List.filled(3, 2, growable: true);
+
+
   names.add("asd");
   print(names[0]);
 
@@ -16,7 +19,6 @@ void main(List<String> args) {
   numbers2.add(33);
   print(numbers2);
 
-  List<int> numbers3 = List.filled(3, 2, growable: true);
   numbers3.add(4);
 
   numbers3.length = 0;

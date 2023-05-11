@@ -19,8 +19,8 @@ void main(List<String> args) {
     
     int num2 = 100 ~/ int.parse("lp");
     print(num2);
-  // ignore: deprecated_member_use 
-  } on IntegerDivisionByZeroException { // TODO:WHY
+
+  } on UnsupportedError { 
     print("how to divide a number to 0 ?");
   } on FormatException catch (e) {
     print("How to divide int/String ?");
