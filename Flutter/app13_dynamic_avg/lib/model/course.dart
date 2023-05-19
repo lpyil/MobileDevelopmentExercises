@@ -10,8 +10,3 @@ class Course {
     return "$name , $credit , $letterValue";
   }
 }
-
-
-class ClassName {
-  
-}
